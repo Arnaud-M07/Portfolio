@@ -6,7 +6,7 @@
 function masquerHeaderAuScroll() {
     let prevScrollPos = window.scrollY;
     let header = document.querySelector('.header-hide');
-    let scrollThreshold = 500; // Ajuster la distance de déclenchement
+    let scrollThreshold = 300; // Ajuster la distance de déclenchement
 
     window.onscroll = function () {
         let currentScrollPos = window.scrollY;
