@@ -118,6 +118,15 @@ p {
     font-size: 14px;
 }
 
+figure {
+    font-family: "Migra";
+    font-style: italic;
+    font-weight: lighter;
+    color: var(--beige);
+}
+
+
+
 /*************************************** COMPONENTS *************************************************/
 /****************************************************************************************************/
 
@@ -141,6 +150,16 @@ button:hover {
     transition: .3s;
 }
 
+button:hover a {
+    color: var(--orange);
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
 @media all and (min-width: 768px) {
     button {
         font-size: 32px;
@@ -157,16 +176,33 @@ hr {
 /******************************************* NAVBAR *************************************************/
 /****************************************************************************************************/
 
+/* Header scroll effect */
+.header-hide {
+    transition: transform .8s ease;
+    transform: translateY(0);
+}
+
+.header-show {
+    transform: translateY(-100%);
+}
+
 header .container {
-    border-bottom: 1px solid #F3DBC6;
+    /* border-bottom: 1px solid #F3DBC6; */
     padding: 0px;
+
 }
 
 .navbar {
+    z-index: 100;
     padding-left: 5vw;
     padding-right: 5vw;
     position: fixed;
+    top: 0;
     width: 100%;
+    height: 10vh;
+    background-color: #14141480;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 2px 10px #14141480;
 }
 
 .navbar-brand {
@@ -272,10 +308,18 @@ header nav .nav-link:hover {
 
 .about .photo-portrait {
     width: 100%;
-    height: 55vh;
+    height: 65vh;
     flex-shrink: 0;
     border-radius: 3px;
     background: #C4C4C4;
+}
+
+.about .photo-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    filter: grayscale();
 }
 
 @media all and (min-width: 992px) {
@@ -351,8 +395,70 @@ header nav .nav-link:hover {
     background: #C4C4C4;
 }
 
+.work .photo-project img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
 @media all and (min-width: 992px) {
     .work .photo-project {
         height: 45vh;
     }
+}
+
+/******************************************* CONTACT *************************************************/
+/****************************************************************************************************/
+
+.contact {
+    padding: 100px 0px;
+}
+
+.contact .row {
+    margin-top: 40px;
+}
+
+.contact .row-contacts {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.contact .text-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.contact .col-list {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    margin-bottom: 40px;
+}
+
+.contact .photo-artist {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.contact .photo-artist figure {
+    height: 92%;
+}
+
+.contact .photo-artist img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+/******************************************* FOOTER *************************************************/
+/****************************************************************************************************/
+
+footer {
+    /* height: 35vh; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
 }
