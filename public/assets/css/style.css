@@ -1,0 +1,358 @@
+/******************************************* GENERAL ************************************************/
+/****************************************************************************************************/
+
+
+/* Colors */
+:root {
+    --white: #F5EEE6;
+    --beige: #F3DBC6;
+    --black: #141414;
+    --orange: #FF3B00;
+}
+
+.white {
+    color: var(--white);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+::selection {
+    background-color: var(--orange);
+}
+
+body {
+    background-color: var(--black);
+}
+
+/* Barre de défilement (fond) */
+::-webkit-scrollbar {
+    background-color: #FAFAFA;
+    width: 5px
+}
+
+/* Barre de défilement (fond) pour Microsoft Edge et Internet Explorer */
+::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Migra";
+    src: url("/public/assets/fonts/Migra/");
+}
+
+@font-face {
+    font-family: "TT_firs_neue";
+    src: url("/public/assets/fonts/tt_firs_neue/TT\ Firs\ Neue\ Trial\ Light.ttf");
+}
+
+@font-face {
+    font-family: "Tusker-grotesk";
+    src: url("/public/assets/fonts/tusker-grotesk-font/TuskerGrotesk-2700Bold.ttf");
+}
+
+@font-face {
+    font-family: "Tusker-grotesk-var2";
+    src: url("/public/assets/fonts/tusker-grotesk-font/TuskerGrotesk-5500Medium.ttf");
+}
+
+
+h1,
+h2 {
+    font-family: "Tusker-grotesk";
+    font-size: 160px;
+    line-height: 160px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+h1 span {
+    font-family: "Migra";
+    font-size: 52px;
+    font-weight: bolder;
+    color: var(--beige);
+    line-height: 0px;
+}
+
+@media all and (min-width: 992px) {
+
+    h1,
+    h2 {
+        font-size: 200px;
+        line-height: 200px;
+    }
+}
+
+h3 {
+    font-family: "Tusker-grotesk-var2";
+    font-size: 18px;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+@media all and (min-width: 992px) {
+    h3 {
+        font-size: 32px;
+    }
+}
+
+h4 {
+    font-family: "Tusker-grotesk";
+    font-size: 64px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+@media all and (min-width: 992px) {
+    h4 {
+        font-size: 80px;
+    }
+}
+
+p {
+    font-family: "TT_firs_neue";
+    color: var(--white);
+    font-size: 14px;
+}
+
+/*************************************** COMPONENTS *************************************************/
+/****************************************************************************************************/
+
+/* Buttons */
+
+button {
+    font-family: "Tusker-grotesk-var2";
+    font-size: 18px;
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid #F5EEE6;
+    border-radius: 50px;
+    padding: .7rem 1rem .5rem 1rem;
+    min-width: 200px;
+    transition: .3s;
+}
+
+button:hover {
+    color: var(--orange);
+    border: 1px solid #FF3B00;
+    transition: .3s;
+}
+
+@media all and (min-width: 768px) {
+    button {
+        font-size: 32px;
+    }
+}
+
+/* hr */
+
+hr {
+    color: var(--white);
+}
+
+
+/******************************************* NAVBAR *************************************************/
+/****************************************************************************************************/
+
+header .container {
+    border-bottom: 1px solid #F3DBC6;
+    padding: 0px;
+}
+
+.navbar {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-family: "Migra";
+    font-size: 20px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-taggline {
+    font-family: "Tusker-grotesk";
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 32px;
+    margin-bottom: 0;
+    transition: letter-spacing 0.5s ease-in-out;
+}
+
+.navbar-taggline:hover {
+    letter-spacing: 0.05em;
+}
+
+header nav .nav-link {
+    font-family: "Tusker-grotesk-var2";
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-right: 0;
+}
+
+header nav .nav-link:hover {
+    color: var(--orange);
+}
+
+
+
+/******************************************* HERO BANNER ********************************************/
+/****************************************************************************************************/
+
+.hero-banner {
+    height: 100vh;
+    background-image: url(/public/assets/img/Hero-banner-bg.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Left part */
+.hero-banner .pre-header {
+    font-family: "Migra";
+    font-size: 32px;
+    color: var(--beige);
+    margin-bottom: 0px;
+}
+
+/* Right part */
+
+.hero-banner .right-part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 3vh;
+}
+
+.hero-banner .right-part h3 {
+    margin-bottom: 15px;
+}
+
+@media all and (min-width: 768px) {
+    .hero-banner .right-part h3 {
+        margin-bottom: 30px;
+    }
+}
+
+
+/******************************************* ABOUT **************************************************/
+/****************************************************************************************************/
+
+.about {
+    min-height: 100vh;
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10%
+}
+
+.about-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about .photo-portrait {
+    width: 100%;
+    height: 55vh;
+    flex-shrink: 0;
+    border-radius: 3px;
+    background: #C4C4C4;
+}
+
+@media all and (min-width: 992px) {
+    .about-left {
+        border-right: 1px solid #F5EEE6;
+        height: 80vh;
+    }
+
+    .about .photo-portrait {
+        width: 90%;
+    }
+}
+
+/******************************************* SKILLS **************************************************/
+/****************************************************************************************************/
+
+.skills {
+    padding: 100px 0px;
+    background-image: url(/public/assets/img/hero-banner-bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.skills h3 {
+    white-space: nowrap;
+    margin-left: -2%;
+    font-size: 32px;
+
+}
+
+.high-text {
+    background-color: var(--orange);
+}
+
+.text {
+    white-space: nowrap;
+    /* animation: scrollText 20s linear infinite;  */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/******************************************* WORK ***************************************************/
+/****************************************************************************************************/
+
+.work {
+    padding: 100px 0px;
+}
+
+.work .row {
+    margin-top: 40px;
+}
+
+
+.work .text-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.work .photo-project {
+    width: 100%;
+    height: 20vh;
+    flex-shrink: 0;
+    border-radius: 3px;
+    background: #C4C4C4;
+}
+
+@media all and (min-width: 992px) {
+    .work .photo-project {
+        height: 45vh;
+    }
+}
