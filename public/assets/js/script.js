@@ -49,7 +49,7 @@ function masquerHeaderAuScroll() {
         if (currentScrollPos > scrollThresholdBackground) {
             if (prevScrollPos > currentScrollPos) {
                 header.classList.remove('header-show');
-                header.style.backgroundColor = 'rgba(20, 20, 20, 0.8)'; // Modifier la couleur de fond
+                header.style.backgroundColor = 'rgba(20, 20, 20, 0.3)'; // Modifier la couleur de fond
                 header.style.backdropFilter = 'blur(10px)'; // Modifier le filtre de fond
             } else {
                 header.classList.add('header-show');
