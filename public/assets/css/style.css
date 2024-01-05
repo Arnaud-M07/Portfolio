@@ -178,7 +178,7 @@ hr {
 
 /* Header scroll effect */
 .header-hide {
-    transition: transform .8s ease;
+    transition: transform .8s ease, background-color .8s ease;
     transform: translateY(0);
 }
 
