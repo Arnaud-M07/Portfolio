@@ -118,6 +118,10 @@ p {
     font-size: 14px;
 }
 
+.surligne{
+    background-color: var(--orange);
+}
+
 figure {
     font-family: "Migra";
     font-style: italic;
