@@ -98,3 +98,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('scroll', updateOpacity);
 });
+
+
+
+
+
+
+// Effet bouton sourie
+// document.addEventListener("DOMContentLoaded", function () {
+//     const button = document.querySelector('.follow-mouse-btn');
+//     const maxDistance = 30; // Distance maximale autorisée
+
+//     document.addEventListener('mousemove', function (e) {
+//         const mouseX = e.clientX;
+//         const mouseY = e.clientY;
+
+//         // Calcul de la distance entre la position actuelle de la souris et la position initiale du bouton
+//         const distanceX = mouseX - button.offsetLeft;
+//         const distanceY = mouseY - button.offsetTop;
+
+//         // Limitation du déplacement à 30 pixels
+//         const limitedX = Math.min(Math.max(-maxDistance, distanceX), maxDistance);
+//         const limitedY = Math.min(Math.max(-maxDistance, distanceY), maxDistance);
+
+//         // Mettez à jour la position du bouton en fonction de la position de la souris, limitée à 30 pixels
+//         button.style.top = button.offsetTop + limitedY + 'px';
+//         button.style.left = button.offsetLeft + limitedX + 'px';
+//     });
+// });

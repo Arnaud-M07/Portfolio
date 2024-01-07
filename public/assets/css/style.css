@@ -384,7 +384,7 @@ header nav .nav-link:hover {
 /****************************************************************************************************/
 
 .skills {
-    padding: 100px 0px;
+    padding: 20px 0px;
     background-image: url(/public/assets/img/hero-banner-bg.jpg);
     background-size: cover;
     overflow: hidden;
@@ -439,7 +439,10 @@ header nav .nav-link:hover {
     height: 35vh;
     flex-shrink: 0;
     border-radius: 3px;
-    background: #C4C4C4;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .work .photo-project img {
@@ -447,7 +450,15 @@ header nav .nav-link:hover {
     height: 100%;
     border-radius: 3px;
     object-fit: cover;
+    transition: transform 1s ease-in-out;
 }
+
+.work .photo-project:hover img {
+    transform: scale(1.025); /* Zoom au survol */
+}
+
+
+
 
 @media all and (min-width: 992px) {
     .work .photo-project {
@@ -459,7 +470,7 @@ header nav .nav-link:hover {
 /****************************************************************************************************/
 
 .contact {
-    padding: 100px 0px;
+    padding: 50px 0px;
 }
 
 .contact .row {
@@ -510,3 +521,11 @@ footer {
     align-items: flex-end;
     padding-bottom: 20px;
 }
+
+
+/* .follow-mouse-btn {
+    position: fixed;
+    top: -100px; /* Position initiale hors de la vue */
+    left: -100px; /* Position initiale hors de la vue */
+    transition: top 0.3s ease, left 0.3s ease; /* Transition en douceur */
+} */
