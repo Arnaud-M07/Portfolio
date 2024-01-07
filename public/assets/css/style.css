@@ -118,7 +118,7 @@ p {
     font-size: 14px;
 }
 
-.surligne{
+.highlight-text{
     background-color: var(--orange);
 }
 
@@ -215,7 +215,16 @@ header .container {
     line-height: 16px;
     display: flex;
     align-items: center;
+    color: var(--white);
+    transition: .2s ease-in-out;
 }
+
+.navbar-brand:hover{
+    color: var(--orange);
+    /* transition: .3s ease-in-out; */
+}
+
+
 
 .navbar-taggline {
     font-family: "Tusker-grotesk";
@@ -229,7 +238,7 @@ header .container {
 }
 
 .navbar-taggline:hover {
-    letter-spacing: 0.05em;
+    letter-spacing: 0.20em;
 }
 
 header nav .nav-link {
@@ -393,7 +402,7 @@ header nav .nav-link:hover {
 
 .work .photo-project {
     width: 100%;
-    height: 20vh;
+    height: 35vh;
     flex-shrink: 0;
     border-radius: 3px;
     background: #C4C4C4;
@@ -403,6 +412,7 @@ header nav .nav-link:hover {
     width: 100%;
     height: 100%;
     border-radius: 3px;
+    object-fit: cover;
 }
 
 @media all and (min-width: 992px) {
