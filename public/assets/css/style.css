@@ -266,7 +266,7 @@ header nav .nav-link:hover {
 
 .hero-banner {
     height: 100vh;
-    background-image: url('../img/herobanner-bg.jpg');
+    background-image: url('../img/hero.jpg');
     background-size: cover;
     display: flex;
     align-items: flex-end;
@@ -385,7 +385,7 @@ header nav .nav-link:hover {
 
 .skills {
     padding: 20px 0px;
-    background-image: url('../img/herobanner-bg.jpg');
+    background-image: url('../img/hero.jpg');
     background-size: cover;
     overflow: hidden;
 }
