@@ -121,7 +121,7 @@ h4 {
 p {
     font-family: "TT_firs_neue";
     color: var(--white);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .highlight-text{
@@ -436,7 +436,7 @@ header nav .nav-link:hover {
 
 .work .photo-project {
     width: 100%;
-    height: 35vh;
+    height: 30vh;
     flex-shrink: 0;
     border-radius: 3px;
     overflow: hidden; 
