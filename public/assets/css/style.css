@@ -390,7 +390,8 @@ header nav .nav-link:hover {
     overflow: hidden;
 }
 
-.skills h3 {
+.skills p {
+    font-family: "Tusker-grotesk-var2";
     white-space: nowrap;
     margin-left: -2%;
     font-size: 32px;
@@ -414,6 +415,20 @@ header nav .nav-link:hover {
     100% {
         transform: translateX(-100%);
     }
+}
+
+/* Boule orange */
+#box {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+    background: #ff3c00da;
+    border-radius: 50%;
+    -webkit-backface-visibility: hidden;
+}
+#canvas {
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -456,8 +471,6 @@ header nav .nav-link:hover {
 .work .photo-project:hover img {
     transform: scale(1.025); /* Zoom au survol */
 }
-
-
 
 
 @media all and (min-width: 992px) {
@@ -521,4 +534,5 @@ footer {
     align-items: flex-end;
     padding-bottom: 20px;
 }
+
 

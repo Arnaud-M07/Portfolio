@@ -101,28 +101,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// // // // // // // // // // // // // //
+// // // // // SKILLS // // // // // // //
+// // // // // // // // // // // // // //
 
 
+// Mouse Effetct
+var box = document.getElementById('box');
+var canvas = document.getElementById('canvas');
+var boxSize = 100;
+var speed = 0.08; // Facteur de vitesse pour le mouvement fluide
 
-// Effet bouton sourie
-// document.addEventListener("DOMContentLoaded", function () {
-//     const button = document.querySelector('.follow-mouse-btn');
-//     const maxDistance = 30; // Distance maximale autorisée
+var currentX = 0;
+var currentY = 0;
 
-//     document.addEventListener('mousemove', function (e) {
-//         const mouseX = e.clientX;
-//         const mouseY = e.clientY;
+function moveBox(e) {
+    var canvasRect = canvas.getBoundingClientRect();
 
-//         // Calcul de la distance entre la position actuelle de la souris et la position initiale du bouton
-//         const distanceX = mouseX - button.offsetLeft;
-//         const distanceY = mouseY - button.offsetTop;
+    var targetX = e.clientX - canvasRect.left - boxSize / 2;
+    var targetY = e.clientY - canvasRect.top - boxSize / 2;
 
-//         // Limitation du déplacement à 30 pixels
-//         const limitedX = Math.min(Math.max(-maxDistance, distanceX), maxDistance);
-//         const limitedY = Math.min(Math.max(-maxDistance, distanceY), maxDistance);
+    // Interpolation pour rendre le mouvement plus fluide
+    currentX += (targetX - currentX) * speed;
+    currentY += (targetY - currentY) * speed;
 
-//         // Mettez à jour la position du bouton en fonction de la position de la souris, limitée à 30 pixels
-//         button.style.top = button.offsetTop + limitedY + 'px';
-//         button.style.left = button.offsetLeft + limitedX + 'px';
-//     });
-// });
+    requestAnimationFrame(function () {
+        box.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
+    });
+}
+
+window.addEventListener('mousemove', moveBox);
