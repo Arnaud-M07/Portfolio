@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
             opacity = 1;
         }
 
-        heroBanner.style.background = `linear-gradient(rgba(20, 20, 20, ${opacity}), rgba(20, 20, 20, ${opacity})), url('../img/herobanner-bg.jpg')`;
+        heroBanner.style.background = `linear-gradient(rgba(20, 20, 20, ${opacity}), rgba(20, 20, 20, ${opacity})), url('./public/assets/img/herobanner-bg.jpg')`;
         heroBanner.style.backgroundSize = 'cover';
     }
 
