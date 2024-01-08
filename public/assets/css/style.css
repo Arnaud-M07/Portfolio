@@ -45,7 +45,7 @@ body {
 
 @font-face {
     font-family: "TT_firs_neue";
-    src: url("./public/assets/fonts/tt_firs_neue/TT\ Firs\ Neue\ Trial\ Light.ttf");
+    src: url("./public/assets/fonts/tt_firs_neue/TT-Firs-Neue-Trial-Light.ttf");
 }
 
 @font-face {
@@ -266,7 +266,7 @@ header nav .nav-link:hover {
 
 .hero-banner {
     height: 100vh;
-    background-image: url(./public/assets/img/Hero-banner-bg.jpg);
+    background-image: url('../img/Hero-banner-bg.jpg');
     background-size: cover;
     display: flex;
     align-items: flex-end;
@@ -385,7 +385,7 @@ header nav .nav-link:hover {
 
 .skills {
     padding: 20px 0px;
-    background-image: url(./public/assets/img/hero-banner-bg.jpg);
+    background-image: url('../img/Hero-banner-bg.jpg');
     background-size: cover;
     overflow: hidden;
 }
