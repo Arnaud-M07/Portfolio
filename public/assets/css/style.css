@@ -419,18 +419,21 @@ header nav .nav-link:hover {
 }
 
 /* Boule orange */
-#box {
-    position: absolute;
-    width: 100px; 
-    height: 100px;
-    background: #ff3c00da;
-    border-radius: 50%;
-    -webkit-backface-visibility: hidden;
+@media all and (min-width: 768px){
+    #box {
+        position: absolute;
+        width: 100px; 
+        height: 100px;
+        background: #ff3c00da;
+        border-radius: 50%;
+        -webkit-backface-visibility: hidden;
+    }
+    #canvas {
+        position: relative;
+        overflow: hidden;
+    }
 }
-#canvas {
-    position: relative;
-    overflow: hidden;
-}
+
 
 
 /******************************************* WORK ***************************************************/
