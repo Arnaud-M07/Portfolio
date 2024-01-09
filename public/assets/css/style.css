@@ -62,8 +62,8 @@ body {
 h1,
 h2 {
     font-family: "Tusker-grotesk";
-    font-size: 160px;
-    line-height: 200px;
+    font-size: 140px;
+    line-height: 140px;
     text-transform: uppercase;
     color: var(--white);
 }
@@ -398,8 +398,13 @@ header nav .nav-link:hover {
     font-family: "Tusker-grotesk-var2";
     white-space: nowrap;
     margin-left: -2%;
-    font-size: 32px;
+    font-size: 12px;
+}
 
+@media all and (min-width: 768px) {
+    .skills p {
+        font-size: 32px;
+    }
 }
 
 .high-text {
