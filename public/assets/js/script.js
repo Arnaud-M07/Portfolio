@@ -106,28 +106,44 @@ document.addEventListener("DOMContentLoaded", function () {
 // // // // // // // // // // // // // //
 
 
-// Mouse Effetct
+// Effet souris
 var box = document.getElementById('box');
 var canvas = document.getElementById('canvas');
 var boxSize = 100;
 var speed = 0.08; // Facteur de vitesse pour le mouvement fluide
+var inertia = 0.9; // Facteur d'inertie
 
 var currentX = 0;
 var currentY = 0;
+var targetX = 0;
+var targetY = 0;
 
 function moveBox(e) {
     var canvasRect = canvas.getBoundingClientRect();
 
-    var targetX = e.clientX - canvasRect.left - boxSize / 2;
-    var targetY = e.clientY - canvasRect.top - boxSize / 2;
+    targetX = e.clientX - canvasRect.left - boxSize / 2;
+    targetY = e.clientY - canvasRect.top - boxSize / 2;
+}
 
+function updateBox() {
     // Interpolation pour rendre le mouvement plus fluide
     currentX += (targetX - currentX) * speed;
     currentY += (targetY - currentY) * speed;
 
-    requestAnimationFrame(function () {
-        box.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
-    });
+    box.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
+
+    if (Math.abs(currentX - targetX) > 0.5 || Math.abs(currentY - targetY) > 0.5) {
+        // Si la différence entre la position actuelle et la position cible est suffisamment grande, continuer l'effet d'inertie
+        requestAnimationFrame(updateBox);
+    } else {
+        // Sinon, arrêter l'effet d'inertie
+        currentX = targetX;
+        currentY = targetY;
+        // Démarrer l'effet d'inertie pour la prochaine mise à jour
+        requestAnimationFrame(updateBox);
+    }
 }
 
 window.addEventListener('mousemove', moveBox);
+// Démarrer l'effet d'inertie pour la première fois
+requestAnimationFrame(updateBox);
