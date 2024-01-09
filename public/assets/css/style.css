@@ -427,10 +427,10 @@ header nav .nav-link:hover {
         position: absolute;
         width: 100px;
         height: 100px;
-        background: #ff3c00e3;
+        background: #F3DBC688;
         border-radius: 50%;
         -webkit-backface-visibility: hidden;
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(3px);
     }
 
     #canvas {
