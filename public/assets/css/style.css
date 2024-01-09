@@ -348,7 +348,12 @@ header nav .nav-link:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 10%
+}
+
+@media all and (min-width: 992px){
+    .about-left {
+        padding-right: 10%
+    }
 }
 
 .about-right {
