@@ -24,18 +24,18 @@
 
 body {
     background-color: var(--black);
+
 }
 
-/* Barre de défilement (fond) */
-::-webkit-scrollbar {
+/* Barre de défilement */
+/* ::-webkit-scrollbar {
     background-color: #FAFAFA;
     width: 5px
 }
-
-/* Barre de défilement (fond) pour Microsoft Edge et Internet Explorer */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--orange);
-}
+    background-color:var(--orange);
+} */
+
 
 /* Fonts */
 @font-face {
