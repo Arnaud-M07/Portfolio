@@ -396,14 +396,15 @@ header nav .nav-link:hover {
 
 .skills p {
     font-family: "Tusker-grotesk-var2";
-    white-space: nowrap;
-    margin-left: -2%;
-    font-size: 12px;
+    /* white-space: nowrap; */
+    margin-left: -80%;
+    font-size: 20px;
 }
 
 @media all and (min-width: 768px) {
     .skills p {
         font-size: 32px;
+        margin-left: -2%;
     }
 }
 
