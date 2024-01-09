@@ -427,7 +427,7 @@ header nav .nav-link:hover {
         position: absolute;
         width: 100px;
         height: 100px;
-        background: #F3DBC688;
+        background: #f5eee688;
         border-radius: 50%;
         -webkit-backface-visibility: hidden;
         backdrop-filter: blur(3px);
