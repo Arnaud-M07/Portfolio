@@ -427,9 +427,10 @@ header nav .nav-link:hover {
         position: absolute;
         width: 100px;
         height: 100px;
-        background: #ff3c00da;
+        background: #ff3c00d0;
         border-radius: 50%;
         -webkit-backface-visibility: hidden;
+        backdrop-filter: blur(2px);
     }
 
     #canvas {
@@ -492,7 +493,7 @@ header nav .nav-link:hover {
 /****************************************************************************************************/
 
 .contact {
-    padding: 50px 0px;
+    padding: 30px 0px;
 }
 
 .contact .row {
@@ -524,7 +525,7 @@ header nav .nav-link:hover {
 }
 
 .contact .photo-artist figure {
-    height: 92%;
+    height: 93%;
 }
 
 .contact .photo-artist img {
