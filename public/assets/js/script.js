@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // Animated heading 
 // creative / designer / developer
 document.addEventListener("DOMContentLoaded", function () {
-    var animatedHeading1 = document.getElementById('animated-heading-1');
-    var animatedHeading2 = document.getElementById('animated-heading-2');
-    var animatedHeading3 = document.getElementById('animated-heading-3');
+    let animatedHeading1 = document.getElementById('animated-heading-1');
+    let animatedHeading2 = document.getElementById('animated-heading-2');
+    let animatedHeading3 = document.getElementById('animated-heading-3');
     // Ajoutez une classe pour déclencher l'animation
     animatedHeading1.classList.add('slide-in');
     animatedHeading2.classList.add('slide-in');
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // &
 document.addEventListener("DOMContentLoaded", function () {
-    var h1Span = document.querySelector('h1 span');
+    let h1Span = document.querySelector('h1 span');
     // Ajouter la classe 'visible' après un délai de 3 secondes
     setTimeout(function () {
         h1Span.parentElement.classList.add('visible');
@@ -76,13 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Background fade out 
 document.addEventListener("DOMContentLoaded", function () {
-    var heroBanner = document.querySelector('.hero-banner');
-    var fadeStart = heroBanner.offsetTop + heroBanner.offsetHeight / 4;
-    var fadeUntil = heroBanner.offsetTop + heroBanner.offsetHeight / 1.5;
+    let heroBanner = document.querySelector('.hero-banner');
+    let fadeStart = heroBanner.offsetTop + heroBanner.offsetHeight / 4;
+    let fadeUntil = heroBanner.offsetTop + heroBanner.offsetHeight / 1.5;
 
     function updateOpacity() {
-        var scroll = window.scrollY;
-        var opacity = 0;
+        let scroll = window.scrollY;
+        let opacity = 0;
 
         if (scroll > fadeStart && scroll < fadeUntil) {
             opacity = (scroll - fadeStart) / (fadeUntil - fadeStart);
@@ -107,19 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Effet souris
-var box = document.getElementById('box');
-var canvas = document.getElementById('canvas');
-var boxSize = 100;
-var speed = 0.08; // Facteur de vitesse pour le mouvement fluide
-var inertia = 0.9; // Facteur d'inertie
 
-var currentX = 0;
-var currentY = 0;
-var targetX = 0;
-var targetY = 0;
+const box = document.getElementById('box');
+const canvas = document.getElementById('canvas');
+const boxSize = 100;
+const speed = 0.05; // Facteur de vitesse pour le mouvement fluide
+const inertia = 0.9; // Facteur d'inertie
+
+let currentX = 0, currentY = 0, targetX = 0, targetY = 0;
 
 function moveBox(e) {
-    var canvasRect = canvas.getBoundingClientRect();
+    const canvasRect = canvas.getBoundingClientRect();
 
     targetX = e.clientX - canvasRect.left - boxSize / 2;
     targetY = e.clientY - canvasRect.top - boxSize / 2;
