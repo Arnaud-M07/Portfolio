@@ -480,6 +480,10 @@ header nav .nav-link:hover {
     align-items: center;
 }
 
+.work .photo-project a{
+    height: 100%;
+}
+
 .work .photo-project img {
     width: 100%;
     height: 100%;
@@ -496,7 +500,7 @@ header nav .nav-link:hover {
 
 @media all and (min-width: 992px) {
     .work .photo-project {
-        height: 55vh;
+        height: 45vh;
     }
 }
 
