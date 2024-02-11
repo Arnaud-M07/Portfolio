@@ -149,7 +149,7 @@ figure {
     background-color: transparent;
     border: 1px solid #F5EEE6;
     border-radius: 50px;
-    padding: .7rem 1rem .5rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     min-width: 200px;
     transition: .3s;
 }
