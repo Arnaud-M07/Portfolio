@@ -142,7 +142,7 @@ figure {
 
 /* Buttons */
 
-button {
+.button {
     font-family: "Tusker-grotesk-var2";
     font-size: 18px;
     color: var(--white);
@@ -154,13 +154,13 @@ button {
     transition: .3s;
 }
 
-button:hover {
+.button:hover {
     color: var(--orange);
     border: 1px solid #FF3B00;
     transition: .3s;
 }
 
-button:hover a {
+.button:hover a {
     color: var(--orange);
     transition: .3s;
 }
