@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // // // // // HERO BANNER // // // // //
 // // // // // // // // // // // // // //
 
-// Animated heading 
+// Animated heading
 // creative / designer / developer
 document.addEventListener("DOMContentLoaded", function () {
     let animatedHeading1 = document.getElementById('animated-heading-1');
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Background fade out 
+// Background fade out
 document.addEventListener("DOMContentLoaded", function () {
     let heroBanner = document.querySelector('.hero-banner');
     let fadeStart = heroBanner.offsetTop + heroBanner.offsetHeight / 4;
@@ -145,3 +145,9 @@ function updateBox() {
 window.addEventListener('mousemove', moveBox);
 // Démarrer l'effet d'inertie pour la première fois
 requestAnimationFrame(updateBox);
+
+
+// Animation AOS -- fonctionne avec le fichier = aos.js
+AOS.init({
+    duration: 800
+});
